@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asteroid-detector 2000</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>ASTEROID-DETECTOR 2000</h1>
+    <p>Welcome here! To get impact info:</p>
+    <ul>
+        <li>1. Move the map and select an asteroid. It's oribital path can be seen.</li>
+        <li>2. Select the impact angle in degreess below.</li>
+        <li>3. Press the big blue "Simulate" button</li>
+        <li>4. Selecting the original asteroid, hover over the "Impact Zone Map" and click an area in the map to see the impact radius of the asteroid in that location.</li>
+        <li>5. You can now view then impact radius and force!</li>
+    </ul>
+
+    <div id="three_container"></div>
+
+    <div id="asteroid-info">
+        <h3>Asteroid Info</h3>
+        <p id="name">Name: </p>
+        <p id="id">ID:</p>
+        <p id="speed">Speed:</p>
+        <p id="diameter">Diameter:</p>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <div id="sim">
+        <div>
+            <h1>IMPACT</h1>
+            <h3>Enter the asteroid's impact angle:</h3>
+            <input type="number" id="impact-angle" value="90">
+            <div id="impact-simulation"></div>
+            <button id="simulate">Simulate</button>
+        </div>
+        <div id="simulation-info">
+            <h3 id="state">Simulation not done</h3>
+            <div id="impact-area">
+                <p id="iRadius">Impact radius (km):</p>
+                <p id="iArea">Impact area (km squared): </p>
+                <h5>Areas of cities (km squared)</h5>
+                <p>Paris: 105.4</p>
+                <p>London: 1572</p>
+                <p>Tokyo: 2194</p>
+                <p>Johannesburg: 334.81</p>
+                <p>New York: 783.8</p>
+                <p>Rio de Janeiro 1255</p>
+            </div>
+            <div id="impact-energy">
+                <h5>Impact energy (Megatons of TNT)</h5>
+                <p id="iEnergy">Impact energy:</p>
+                <p>Hiroshima bomb: 0.015</p>
+                <p>Tsar Bomba: 50</p>
+                <p>The meteorite that killed the dinosuars: 72000000</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="impact-map">
+        <h4>Impact Zone Map</h4>
+        <svg id="d3-container"></svg>
+    </div>
+
+    <script type="module" src="{{ url_for('static', filename='js/impact.js') }}"></script>
+</body>
+</html>

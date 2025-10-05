@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "three": "^0.180.0"
+  }
+}

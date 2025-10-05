@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#three_container {
+    border: 2px solid black;
+    border-radius: 20px;
+    position: relative;
+}
+
+#impact-map {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 16px;
+    z-index: 2000;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    pointer-events: auto;
+}
+
+#impact-map h4 {
+    text-align: center;
+    margin: 16px;
+}
+
+#impact-map svg {
+    display: none;
+    pointer-events: auto;
+}
+
+#impact-map:hover svg {
+    display: block;
+}
+
+svg .click-circle {
+    color: red;
+    opacity: 0.7;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    pointer-events: none;
+}
+
+.name-label {
+    color: black;
+    font-weight: bold;
+}
+
+.id-label {
+    color: rgb(0, 202, 0);
+}
+
+#impact-simulation {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#asteroid-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 16px;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+#asteroid-info p {
+    margin: 10px;
+    padding: 10px;
+}
+
+#asteroid-info h3 {
+    margin: 10px;
+    padding: 10px;
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-color: rgb(76, 163, 250);
+    font-size: 120%;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(22, 138, 255);
+    cursor: pointer;
+}
+
+#sim {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
